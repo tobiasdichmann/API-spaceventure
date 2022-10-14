@@ -1,0 +1,1214 @@
+{
+	"info": {
+		"_postman_id": "6bb091a2-bd85-4a43-97fa-afad14d24a39",
+		"name": "Spaceventure",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12464673"
+	},
+	"item": [
+		{
+			"name": "About",
+			"item": [
+				{
+					"name": "Hent about",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4444/about",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"about"
+							]
+						},
+						"description": "Henter about - der er kun 1 document"
+					},
+					"response": []
+				},
+				{
+					"name": "Ret about (ADMIN)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Lorem ipsum",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis lectus quis sem lacinia nonummy. ",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4444/about/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"about",
+								"admin"
+							]
+						},
+						"description": "Retter i data i about"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Banner",
+			"item": [
+				{
+					"name": "Hent alle banner",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4444/banner",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"banner"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Opret banner (ADMIN)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Banner",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis lectus quis sem lacinia nonummy. ",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Marianne/Grafik/computerting/dummy.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4444/banner/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"banner",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Slet banner (ADMIN)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4444/banner/admin/617af41c28fc8765b05fbb97",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"banner",
+								"admin",
+								"617af41c28fc8765b05fbb97"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Contact",
+			"item": [
+				{
+					"name": "Hent alle contact (ADMIN)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4444/contact/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"contact",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hent udvalgt contact (ADMIN)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4444/contact/admin/617bcc47b029bb1a5c0aa1c9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"contact",
+								"admin",
+								"617bcc47b029bb1a5c0aa1c9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Opret contact",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "John Doe",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "john@doe.dk",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "78787878",
+									"type": "text"
+								},
+								{
+									"key": "message",
+									"value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis lectus quis sem lacinia nonummy. ",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4444/contact",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"contact"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Slet contact (ADMIN)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4444/contact/admin/6337f2ec6a3e05054471e829",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"contact",
+								"admin",
+								"6337f2ec6a3e05054471e829"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Newssubscription",
+			"item": [
+				{
+					"name": "Hent alle newssubscription (ADMIN)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4444/newssubscription/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"newssubscription",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hent udvalgt newssubscription (ADMIN)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4444/newssubscription/admin/6337f3166a3e05054471e82e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"newssubscription",
+								"admin",
+								"6337f3166a3e05054471e82e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Opret newssubscription (bruger - ud fra email)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Jane Doe",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "jane@doe.dk",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4444/newssubscription",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"newssubscription"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Slet newssubscription (bruger - ud fra email)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:4444/newssubscription/afmeld/jane@doe.dk",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"newssubscription",
+								"afmeld",
+								"jane@doe.dk"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Slet newssubscription (ADMIN)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4444/newssubscription/admin/6337f3166a3e05054471e82e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"newssubscription",
+								"admin",
+								"6337f3166a3e05054471e82e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Footer",
+			"item": [
+				{
+					"name": "Hent footer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4444/footer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"footer"
+							]
+						},
+						"description": "Henter about - der er kun 1 document"
+					},
+					"response": []
+				},
+				{
+					"name": "Ret footer (ADMIN)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Spaceventure",
+									"type": "text"
+								},
+								{
+									"key": "cvr",
+									"value": "999999999999 99",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "Lorem ipsum larum",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "12 34 56 78",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "info@spaceventure.dk",
+									"type": "text"
+								},
+								{
+									"key": "openinghours",
+									"value": "Alle hverdage kl. 8 til 16",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4444/footer/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"footer",
+								"admin"
+							]
+						},
+						"description": "Retter i data i about"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Gallery",
+			"item": [
+				{
+					"name": "Hent alle gallery",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4444/gallery",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"gallery"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hent udvalgt gallery",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4444/gallery/617f7d2d066b123e4c7c9402",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"gallery",
+								"617f7d2d066b123e4c7c9402"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Opret gallery (ADMIN)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "imagetext",
+									"value": "Gallery img beskrivelse",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Marianne/Grafik/computerting/dummy.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4444/gallery/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"gallery",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ret gallery (ADMIN)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "imagetext",
+									"value": "Gallery img beskrivelse rettet",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Marianne/Grafik/ChokoLakrids/2018-04-25_123147.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4444/gallery/admin/6179aad9016d9c6bb0cafefd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"gallery",
+								"admin",
+								"6179aad9016d9c6bb0cafefd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Slet gallery (ADMIN)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4444/gallery/admin/6179aad9016d9c6bb0cafefd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"gallery",
+								"admin",
+								"6179aad9016d9c6bb0cafefd"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Safety",
+			"item": [
+				{
+					"name": "Hent safety",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4444/safety",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"safety"
+							]
+						},
+						"description": "Henter about - der er kun 1 document"
+					},
+					"response": []
+				},
+				{
+					"name": "Ret safety (ADMIN)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Safety lorem ipsum",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis lectus quis sem lacinia nonummy. ",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4444/safety/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"safety",
+								"admin"
+							]
+						},
+						"description": "Retter i data i about"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Spacecraft",
+			"item": [
+				{
+					"name": "Hent spacecraft",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4444/spacecraft",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"spacecraft"
+							]
+						},
+						"description": "Henter about - der er kun 1 document"
+					},
+					"response": []
+				},
+				{
+					"name": "Ret spacecraft (ADMIN)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Lorem ipsum",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis lectus quis sem lacinia nonummy. ",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Marianne/Grafik/computerting/dummy.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4444/spacecraft/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"spacecraft",
+								"admin"
+							]
+						},
+						"description": "Retter i data i about"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Team",
+			"item": [
+				{
+					"name": "Hent alle team",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4444/team",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"team"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hent udvalgt team",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4444/team/617f7f19066b123e4c7c9415",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"team",
+								"617f7f19066b123e4c7c9415"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Opret team (ADMIN)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Lorem Ipsum",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "CEO",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "xx@xxx.dk",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "78787878",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Marianne/Grafik/computerting/dummy.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4444/team/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"team",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ret team (ADMIN)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Lorem Ipsum Rettet",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "CEO",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "yyy@yyy.dk",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "78787878",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Marianne/Grafik/computerting/dummy.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4444/team/admin/617af9a11eed823f30d8a32c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"team",
+								"admin",
+								"617af9a11eed823f30d8a32c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Slet team (ADMIN)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4444/team/admin/617af9a11eed823f30d8a32c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"team",
+								"admin",
+								"617af9a11eed823f30d8a32c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tours",
+			"item": [
+				{
+					"name": "Hent alle tours",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4444/tours",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"tours"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hent udvalgt tours",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4444/tours/617af72128fc8765b05fbbc5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"tours",
+								"617af72128fc8765b05fbbc5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Søg tours - søger i content og title",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4444/tours/soeg/mulighed",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"tours",
+								"soeg",
+								"mulighed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Opret tours (ADMIN)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Tur lorem ipsum",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis lectus quis sem lacinia nonummy. ",
+									"type": "text"
+								},
+								{
+									"key": "traveltime",
+									"value": "0 timer",
+									"type": "text"
+								},
+								{
+									"key": "destination",
+									"value": "Lorem",
+									"type": "text"
+								},
+								{
+									"key": "distance",
+									"value": "0 km",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "0 kr.",
+									"type": "text"
+								},
+								{
+									"key": "image1",
+									"type": "file",
+									"src": "/C:/Marianne/Grafik/computerting/dummy.jpg"
+								},
+								{
+									"key": "image2",
+									"type": "file",
+									"src": "/C:/Marianne/Grafik/computerting/dummy2.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4444/tours/admin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"tours",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ret tours (ADMIN)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Tur lorem ipsum rettet",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis lectus quis sem lacinia nonummy. Rettet.",
+									"type": "text"
+								},
+								{
+									"key": "traveltime",
+									"value": "0 timer",
+									"type": "text"
+								},
+								{
+									"key": "destination",
+									"value": "Lorem",
+									"type": "text"
+								},
+								{
+									"key": "distance",
+									"value": "0 km",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "0 kr.",
+									"type": "text"
+								},
+								{
+									"key": "image1",
+									"type": "file",
+									"src": "/C:/Marianne/Grafik/computerting/dummy.jpg"
+								},
+								{
+									"key": "image2",
+									"type": "file",
+									"src": "/C:/Marianne/Grafik/computerting/dummy2.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:4444/tours/admin/617af72128fc8765b05fbbc5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"tours",
+								"admin",
+								"617af72128fc8765b05fbbc5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Slet tours (ADMIN)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4444/tours/admin/617af72128fc8765b05fbbc5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4444",
+							"path": [
+								"tours",
+								"admin",
+								"617af72128fc8765b05fbbc5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Server velkomst",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4444",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4444"
+				}
+			},
+			"response": []
+		}
+	]
+}
